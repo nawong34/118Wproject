@@ -1,0 +1,184 @@
+
+html{
+background-color: rgba(255, 179, 71,0.3);
+}
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button:hover{
+  opacity: 0.5;
+}
+.links {
+  background-color: rgb(255, 179, 71);
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: space-between;
+  display: flex;
+  width:100%;
+}
+
+.signup {
+  float: left;
+  width: 100%;
+}
+
+.links input[type="submit"] {
+  padding: 5px 10px;
+  border: 1px solid grey;
+  background-color: white;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+}
+
+.sign-up-form {
+  float: left;
+  width: 47.5%;
+  padding: 1.25%;
+}
+
+.button1 {
+  float: left;
+  display: flex;
+  justify-content: flex-end;
+  width: 47.5%;
+  
+  margin-top:10px;
+  height: 50px
+}
+
+.button1 button {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: 1px solid grey;
+  background-color: white;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.social {
+  position: relative;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.home-page {
+  width: 100%;
+  top: 0;
+  background-color: rgb(255, 179, 71);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  min-height: 100px;
+}
+
+.user-cart {
+  margin: 10px 10px 0 0;
+}
+
+.logo {
+  float: left;
+  width: 10%;
+  height: 100%;
+}
+
+.navbutton {
+  height: 30px;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size:15px;
+}
+
+.HPButtons {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HPButtons button {
+  background-color: transparent;
+  border: transparent;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  align-items: center;
+
+}
+
+.home-page-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-top: 107px;
+}
+
+.home-page-image {
+  margin: 25px;
+  border-radius: 10px;
+}
+
+.operating-hours {
+  font-size: 20px;
+  border-color: black;
+  border-radius: 10px;
+  border: groove;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.op-list {
+  margin: 10px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.large-text {
+  font-size: 30px;
+}
+
+.content-column p {
+  width: 60%;
+  margin-top: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content-column button {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(255, 179, 71);
+  border: transparent;
+  font-size: 30px;
+}
+
+.child-social {
+  justify-content: center;
+  display: flex;
+}
+
+.child-social img {
+  margin: 10px;
+}
+
+.t_loc{
+  margin-bottom:20px;
+}

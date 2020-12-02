@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="career.css">
+    <link rel="stylesheet" type="text/css" href="practice.css">
+
+
+
+</head>
+
+<body>
+    <div class="root">
+        <nav class="home-page">
+            <div class="logo">
+                <a href="index.html"><img src="https://i.ibb.co/HCPmHPG/ltalogo.png" alt="Logo"
+                        style="width:100px; height:100px;"></a>
+            </div>
+
+            <div class="HPButtons">
+                <button class="navbutton" onclick="document.location='foodmenu.html'">Menu</button>
+                <button class="navbutton" onclick="document.location='reservation.html'">Book Reservation</button>
+                <button class="navbutton" onclick="document.location='Locations.html'">Locations</button>
+                <button class="navbutton" onclick="document.location='AboutUs.html'">About Us</button>
+                <button class="navbutton" onclick="document.location='signup.html'">Sign Up</button>
+            </div>
+
+            <div class="user-cart">
+                <a href="Cart.html"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png"
+                        style="width:25px; height:25px;"></a>
+                <a href="UserPage.html"><img src="https://static.thenounproject.com/png/19085-200.png" alt="User" style="width:25px; height:25px;"></a>
+            </div>
+        </nav>
+        <h3 class="title">Career</h3>
+        <div class="benefits">
+            <h1>Benefits</h1>
+            <li>Health Insurance will be given to full-time workers</li>
+            <li>All employees will have one meal provided per shift</li>
+            <li>Offer retirement plans for full-time workers</li>
+            <li>Pay periods are every 2 weeks</li>
+            <li>Promotions and increased wages as expectations are exceeded</li>
+
+        </div>
+        <div class="r-manager">
+
+            <h1><strong>Restaurant Manager</strong></h1>
+            <h2>Job Responsibilities and Duties</h2>
+            <h3>Wage:$25/hr</h3>
+            <li>Manage, train, and discipline employees</li>
+            <li>Order supplies as needed</li>
+            <li>Interview Candidates for potential employement;must be a good judge of character</li>
+            <li>Organize and oversee community outreach programs</li>
+            <li>Coordinate marketing and promotional campaigns to entice customers and create consistent
+                customers
+            </li>
+
+        </div>
+        <div class="fry-cook">
+            <h1><strong>Fry Cook</strong></h1>
+            <h2>Job Responsibilites and Duties</h2>
+            <h3>Wage:$17/hr</h3>
+            <li>In charge of making sure the work station is always clean and sanitary</li>
+            <li>Be able to assist with unpacking and organizing delivery packages and supplies in the kitchen</li>
+            <li>Can memorize key components of our menu and create those dishes without mistake</li>
+            <li>Communicate with other workers on orders</li>
+        </div>
+        <div class="waiter">
+            <h1><strong>Waiter</strong></h1>
+            <h2>Job Responsibilies and Duties</h2>
+            <h3>Wage:$16/hr</h3>
+            <li>Be able to communicate well with customers</li>
+            <li>Communicate order details to the Kitchen Staff</li>
+            <li>Have the ability to memorize orders by the customers</li>
+            <li>Always keep a positive attitude</li>
+            <li>Offer menu recommendations upon request</li>
+
+        </div>
+        <div class="sign-up-career">
+            <h2>If you are interested in any of these jobs or have more questions, please feel free to contact us!
+            </h2>
+            <button onclick="document.location='contactus.html'">Sign Up!</button>
+        </div>
+        <div class="links">
+            <form id=email class="sign-up-form" action="">
+                <div class="signup">
+                    <h3>Subscribe to our Newsletter for<br>promotions and announcements!</h3>
+                    <input id="sub" type="text" placeholder="Email address" name="mail" required>
+                    <input type="submit" value="Subscribe!">
+                </div>
+            </form>
+            <div class="social">
+                <h2>Follow our Socials for news and updates!</h2>
+                <div class="child-social">
+                    <a href="http://www.twitter.com"><img
+                            src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Twitter_NEW.png"
+                            width="30" height="30" alt="Twitter"></a>
+                    <a href="http://www.instagram.com"><img
+                            src="https://cdn.iconscout.com/icon/free/png-512/instagram-233-896451.png" width="30"
+                            height="30" alt="Instagram"></a>
+                    <a href="http://www.facebook.com"><img
+                            src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" width="30"
+                            height="30" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="button1">
+                <button onclick="document.location='contactus.html'">Contact Us</button>
+                <button onclick="document.location='Career.html'">Careers</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+        const form1 = document.getElementById("email");
+        form1.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+            axios.post('/career', {
+                sub: document.getElementById("sub").value,
+
+            }).then(res => location.href = '/')
+        });
+        const request = new XMLHttpRequest();
+        console.log("making the request")
+        request.open("post", "localhost:3000/career");   // Define the URL to connect.
+        request.onload = function () {    // Execute this function when the server responds.
+            const json = JSON.parse(request.response);
+            if (json.success) {
+                window.location.href = 'index.html';   // Redirect to user.html if successful login.
+            }
+            else {
+                window.alert(json.message);   // Display an alert if something goes wrong.
+            }
+        }
+        var data = {
+            sub: document.getElementById("sub").value,
+
+        }
+
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");   // Add headers to the request.
+        request.send(JSON.stringify(data));   // Send the request to the server along with data. Data contains information given by the user. 
+
+    </script>
+</body>
+
+</html>

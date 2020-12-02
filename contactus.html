@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contactus.css">
+    <link rel="stylesheet" type="text/css" href="practice.css">
+
+
+
+</head>
+
+<body>
+    <div class="root">
+        <nav class="home-page">
+            <div class="logo">
+                <a href="index.html"><img
+                        src="https://i.ibb.co/HCPmHPG/ltalogo.png"
+                        alt="Logo" style="width:100px; height:100px;"></a>
+            </div>
+
+            <div class="HPButtons">
+                <button class="navbutton" onclick="document.location='foodmenu.html'">Menu</button>
+                <button class="navbutton" onclick="document.location='reservation.html'">Book Reservation</button>
+                <button class="navbutton" onclick="document.location='Locations.html'">Locations</button>
+                <button class="navbutton" onclick="document.location='AboutUs.html'">About Us</button>
+                <button class="navbutton" onclick="document.location='signup.html'">Sign Up</button>
+            </div>
+
+            <div class="user-cart">
+                <a href="Cart.html"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png"
+                        style="width:25px; height:25px;"></a>
+                <a href="UserPage.html"><img src="https://static.thenounproject.com/png/19085-200.png" alt="User" style="width:25px; height:25px;"></a>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>Contact Us</h3>
+            <form id="contactus" class="contact-us-form" action="">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                <label for="subject">Subject</label>
+                <textarea id="comments" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+                <input type="submit" value="Submit!">
+            </form>
+        </div>
+        <div class="links">
+            <form class="sign-up-form" action="/action_page.php">
+                <div class="signup">
+                    <h3>Subscribe to our Newsletter for<br>promotions and announcements!</h3>
+                    <input type="text" placeholder="Email address" name="mail" required>
+                    <input type="submit" value="Subscribe!">
+                </div>
+            </form>
+            <div class="social">
+                <h2>Follow our Socials for news and updates!</h2>
+                <div class="child-social">
+                    <a href="http://www.twitter.com"><img
+                            src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Twitter_NEW.png"
+                            width="30" height="30" alt="Twitter"></a>
+                    <a href="http://www.instagram.com"><img
+                            src="https://cdn.iconscout.com/icon/free/png-512/instagram-233-896451.png" width="30"
+                            height="30" alt="Instagram"></a>
+                    <a href="http://www.facebook.com"><img
+                            src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" width="30"
+                            height="30" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="button1">
+                <button onclick="document.location='contactus.html'">Contact Us</button>
+                <button onclick="document.location='Career.html'">Careers</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+        const form1 = document.getElementById("contactus");
+        form1.addEventListener("submit", (e) => {
+           
+            e.preventDefault();
+            axios.post('/contactus', {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                comments: document.getElementById("comments").value,
+            } ).then(res => location.href='/')
+        });
+            const request = new XMLHttpRequest();
+            console.log("making the request")
+            request.open("post", "localhost:3000/contactus");  
+            request.onload = function () {  
+                const json = JSON.parse(request.response);
+                if (json.success) {
+                    window.location.href = 'index.html';   
+                }
+                else {
+                    window.alert(json.message);  
+                }
+            }
+            var data = {
+                fname: document.getElementById("lname").value,
+                lname: document.getElementById("fname").value,
+                comments: document.getElementById("comments").value
+            }
+            request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");   
+            request.send(JSON.stringify(data));   
+        
+    </script>
+</body>
+
+</html>

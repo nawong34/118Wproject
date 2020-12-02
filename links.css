@@ -1,0 +1,100 @@
+.links{
+background-color: rgb(255,179,71);
+
+   font-family: 'Courier New', Courier, monospace;
+   position:fixed;
+   bottom: 0;
+   width: 100%;
+   display:block;
+   
+}
+*{
+    margin:0;
+    padding: 0;
+
+}
+
+
+.button1{
+display:flex;
+justify-content: center;
+margin:20px;
+}
+
+
+.social{width:100%;
+    display:flex;
+    justify-content: center;
+    margin:20px;
+}
+a{
+    padding-left:25px;
+    padding-right:25px;
+}
+.home-page{
+ 
+    background-color: rgb(255,179,71);
+     
+      font-family: 'Courier New', Courier, monospace;
+      position:fixed;
+      align-items:center;
+      width: 100%;
+     
+      display:inline-flex;
+
+    }
+    .logo{
+       margin: 20px;
+   
+          text-align:left;
+  
+          display:block;
+         
+    }
+     
+    .User-cart{
+       position: fixed;
+       top: 8px;
+       right: 40px;
+       font-size: 18px;
+    }
+     
+    button{
+       border:transparent;
+       background-color: transparent;
+       padding-left:25px;
+       padding-right:25px;
+       font-size: 12px;
+    }
+     
+    .HPButtons{
+       text-align: bottom;
+       padding: 1px;
+       font-size: 10px;
+       margin: 75px;
+  
+    }
+ 
+    button:hover{
+        opacity: 0.7;
+    }
+   
+    .signup{
+   
+      width:50%;
+      display:flex;
+      margin:20px;
+      font: 15px chilanka, segoe script, purisa, comic sans ms, cursive;
+    }
+
+   input[type=submit] {
+
+      padding: 12px;
+      margin: 8px 10;
+      display: inline;
+      border: 1px;
+      box-sizing: border-box;
+background-color: white;
+border-radius: 12px;}
+
+

@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto;
+}
+
+.menu {
+    width: 65%;
+    height: 1000px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+.menu-category {
+    display: flex;
+    height: 20px;
+    margin-top: 0px;
+    float: left;
+}
+
+.title {
+    height: 65px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: #5E6977;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+}
+
+.Options {
+    padding: 0px 0px;
+    height: 120px;
+    display: flex;
+}
+
+.Options:nth-child(3) {
+    border-top: 1px solid #E1E8EE;
+    border-bottom: 1px solid #E1E8EE;
+}
+
+.buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 40px;
+}
+
+.delete-btn,
+.like-btn {
+    display: inline-block;
+    Cursor: pointer;
+}
+
+.delete-btn {
+    width: 18px;
+    height: 17px;
+    background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
+}
+
+.like-btn {
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    background: url('twitter-heart.png');
+    width: 60px;
+    height: 60px;
+    background-size: 2900%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.item {
+    margin-right: 40px;
+    margin-top: 12px;
+    float: left;
+    object-fit: cover;
+}
+
+.item-image {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.description {
+    padding-top: 20px;
+    margin-left: 0px;
+    margin-right: 25px;
+    width: 150px;
+    float: right;
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.long-description {
+    width: 500px;
+    float: right;
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.quantity {
+    padding-top: 20px;
+    margin-left: 10px;
+    margin-right: 80px;
+    float: right;
+}
+
+.quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+.add-to-cart {
+    width: 70px;
+    height: 35px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: 20px;
+    text-transform: capitalize;
+    display: inline-flex;
+    float: right;
+}
+
+.minus-btn img {
+    margin-bottom: 3px;
+}
+
+.minus-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-btn img {
+    margin-top: 2px;
+}
+
+.plus-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus,
+input:focus {
+    outline: 0;
+}
+
+.total-price {
+    width: 83px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+    float: right;
+    margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+    .options {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .options {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image img {
+        width: 50%;
+    }
+    .image,
+    .quantity,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 350px;
+    background-color: grey;
+    opacity: .9;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.running-total {
+    position: flex;
+    bottom: 0px;
+    display: inline-block;
+    width: 65%;
+    height: 40px;
+    padding-top: 10px;
+}

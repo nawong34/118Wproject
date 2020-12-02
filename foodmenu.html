@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Menu
+    </title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="practice.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+</head>
+
+<body>
+    <div class="root">
+        <nav class="home-page">
+            <div class="logo">
+                <a href="index.html"><img src="https://i.ibb.co/HCPmHPG/ltalogo.png" alt="Logo"
+                        style="width:100px; height:100px;"></a>
+            </div>
+
+            <div class="HPButtons">
+                <button class="navbutton" onclick="document.location='foodmenu.html'">Menu</button>
+                <button class="navbutton" onclick="document.location='reservation.html'">Book Reservation</button>
+                <button class="navbutton" onclick="document.location='Locations.html'">Locations</button>
+                <button class="navbutton" onclick="document.location='AboutUs.html'">About Us</button>
+                <button class="navbutton" onclick="document.location='signup.html'">Sign Up</button>
+            </div>
+
+            <div class="user-cart">
+                <a href="cart.html"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png"
+                        class="shopping-cart" style="width:25px; height:25px;"></a>
+                <a href="UserPage.html"><img src="https://static.thenounproject.com/png/19085-200.png" alt="User"
+                        style="width:25px; height:25px;"></a>
+            </div>
+        </nav>
+
+
+        <div class="menu">
+            <div class="tab">
+                <button class="tablinks" onclick="openMenu(event, 'Appetizers')">Appetizers</button>
+                <button class="tablinks" onclick="openMenu(event, 'Tacos')">Tacos</button>
+                <button class="tablinks" onclick="openMenu(event, 'Burritos')">Burritos</button>
+                <button class="tablinks" onclick="openMenu(event, 'Quesadillas')">Quesadillas</button>
+                <button class="tablinks" onclick="openMenu(event, 'Combo-Plates')">Combo Plates</button>
+                <button class="tablinks" onclick="openMenu(event, 'Desserts')">Desserts</button>
+            </div>
+
+            <div id="Appetizers" class="tabcontent">
+                <div class="title">
+                    <h4 class="menu-category">APPETIZERS</h4>
+                </div>
+
+                <!-- Product #1 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/1108775/pexels-photo-1108775.jpeg" alt=item
+                            style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Cheesy Carne Asada Nachos:</strong>&nbsp;Our zesty
+                            seasoned Carne Asada Nachos is a platter topped with
+                            cheese, carne asada, tomatoes and onions, with your choice of our signature guacamole
+                            dip, spicy tres amigos salsa, and los tres kings super spicy salsa.
+                        </span>
+
+                        <div class="total-price">$11</div>
+                    </div>
+                </div>
+
+                <!-- Product #2 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://cdn.pixabay.com/photo/2018/08/07/16/31/tortilla-3590164_1280.jpg" alt="item"
+                            style="width:100px; height:80px; object-fit: cover;" />
+                        <span class="long-description"><strong>Mini Taquitos</strong>&nbsp;Our platter of fresh tortilla
+                            rolled Taquitos includes chicken,
+                            cheese and your choice of dips from our signature guacamole dip, spicy tres amigos
+                            salsa, and los tres kings super spicy salsa.
+                        </span>
+                        <div class="total-price">$9</div>
+                    </div>
+                </div>
+
+                <!-- Product #3 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/1703272/pexels-photo-1703272.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="" style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Signature Soups:</strong>&nbsp;Pick from one of our
+                            delectable signature soups to quench your
+                            taste buds as you wait for your magnificent Tres Amigos entree: Chicken Tortilla Soup,
+                            Tomato Garbanzo Soup, and Broccoli Cheddar.
+                        </span>
+
+                        <div class="total-price">$6</div>
+                    </div>
+                </div>
+                <!-- Product #4 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/4198015/pexels-photo-4198015.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="" style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Salad:</strong>&nbsp;Grab a light salad mixed from our
+                            farm to table fresh vegetables
+                            topped with our savory picante tres amigos salad salsa.(Add carne asada to your salad
+                            for an extra 3.99).
+                        </span>
+                        <div class="total-price">$8</div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div id="Tacos" class="tabcontent">
+                <div class="title">
+                    <h5 class="menu-category" style="z-index:10;"><strong>TACOS- &nbsp;</strong></h5>
+                    <h5> Choices of meat include: Carne Asada, Lengua, Chorizo, Birria, Chicken, Tripas, and Al Pastor.
+                    </h5>
+                </div>
+                <!-- Product #5 -->
+                <div class="Options">
+                    <div class="buttons ">
+                        <span class="delete-btn "></span>
+                        <span class="like-btn "></span>
+                    </div>
+
+                    <div class="item ">
+                        <img src="https://images.pexels.com/photos/4508965/pexels-photo-4508965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260 "
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Three Friendly Tacos</strong>&nbsp; A plate of four tacos
+                            served with our freshly handmade tortillas,
+                            topped with pico de gallo, sour cream, guacamole, and your choice of meat(s). (Our
+                            signature spicy tres amigos salsa and los tres kings super spicy salsa dips are
+                            optionable replacements for guacamole).
+                        </span>
+                        <div class="total-price ">$14</div>
+                    </div>
+                </div>
+            </div>
+            <div id="Burritos" class="tabcontent">
+                <div class="title">
+                    <h5 class="menu-category" style="z-index:0;"><strong>BURRITOS- &nbsp;&nbsp;</strong></h5>
+                    <h5>Choices of meat include: Carne Asada, Lengua, Chorizo, Birria, Chicken, Tripas, and Al Pastor.
+                    </h5>
+                </div>
+                <!-- Product #7 -->
+                <div class="Options">
+                    <div class="buttons ">
+                        <span class="delete-btn "></span>
+                        <span class="like-btn "></span>
+                    </div>
+
+                    <div class="item ">
+                        <img src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt=item style="width:100px; height:100px; " />
+                        <span class="long-description"><strong>Regular Burrito:</strong>&nbsp; A burrito served with
+                            freshly handmade 8 inch flour tortillas
+                            topped with mexican rice, refried pinto beans, cheese, pico de gallo, and your choice of
+                            meat(s).
+                        </span>
+                        <div class="total-price ">$12</div>
+                    </div>
+                </div>
+
+                <!-- Product #8 -->
+                <div class="Options">
+                    <div class="buttons ">
+                        <span class="delete-btn "></span>
+                        <span class="like-btn "></span>
+                    </div>
+
+                    <div class="item ">
+                        <img src="https://images.unsplash.com/photo-1598806243937-2072d39bc11d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YnVycml0b3xlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Super Burrito:</strong>&nbsp; A burrito served with
+                            freshly handmade 12 inch flour tortillas
+                            topped with mexican rice, refried pinto beans, cheese, pico de gallo, sour cream,
+                            guacamole, and your choice of meat(s). (Our signature spicy tres amigos salsa and los
+                            tres kings super spicy salsa dips are optionable replacements for guacamole).
+                        </span>
+                        <div class="total-price ">$16</div>
+                    </div>
+                </div>
+
+                <!-- Product #9 -->
+                <div class="Options">
+                    <div class="buttons ">
+                        <span class="delete-btn "></span>
+                        <span class="like-btn "></span>
+                    </div>
+
+                    <div class="item ">
+                        <img src="https://cdn.pixabay.com/photo/2019/07/23/18/42/burrito-4358401__480.jpg" alt=item
+                            style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Wet Burrito:</strong>&nbsp; A burrito served with freshly
+                            handmade 12 inch flour tortillas
+                            topped with mexican rice, refried pinto beans, cheese, pico de gallo, sour cream,
+                            guacamole, your choice of meat(s), and our signature red mole poured on top to have you
+                            telling your tres amigos all about it the next day. (Our signature spicy tres amigos
+                            salsa and los tres kings super spicy salsa dips are optionable replacements for
+                            guacamole).
+                        </span>
+                        <div class="total-price ">$18</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Quesadillas" class="tabcontent">
+                <div class="title">
+                    <h5 class="menu-category" style="z-index:0;"><strong>Quesadilla- &nbsp;&nbsp;</strong></h5>
+                    <h5>Choices of meat include: Carne Asada, Lengua, Chorizo, Birria, Chicken, Tripas, and Al Pastor.
+                    </h5>
+                </div>
+
+                <!-- Product #10 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/5848697/pexels-photo-5848697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            class="item-image" alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Regular Quesadilla:</strong>&nbsp;A quesadilla served
+                            with freshly handmade 8 inch flour tortillas
+                            topped with spicy monterey jack cheese, and your choice of meat.</span>
+                        <div class="total-price">$10</div>
+                    </div>
+                </div>
+
+
+
+                <!-- Product #11 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://cdn.pixabay.com/photo/2017/03/07/18/21/quesadillas-2124910__480.jpg"
+                            class="item-image" alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Super Quesadilla</strong>&nbsp; A quesadilla served with
+                            freshly handmade 12 inch flour tortillas
+                            topped with spicy monterey jack cheese,pico de gallo, sour cream, guacamole
+                            and your choice of meat.(Our signature spicy tres amigos salsa and los tres kings super
+                            spicy salsa dips are optionable replacements for guacamole)</span>
+                        <div class="total-price">$12</div>
+                    </div>
+                </div>
+                <!-- Product #12 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://cdn.pixabay.com/photo/2020/08/14/10/51/quesadilla-5487578__480.jpg"
+                            class="item-image" alt=item style="width:100px; height:100px;" />
+                        <span class="long-description"><strong>Wet Quesadilla</strong>&nbsp;A quesadilla served with
+                            freshly handmade 12 inch flour
+                            tortillas topped with spicy monterey jack cheese,pico de gallo, sour cream, guacamole,
+                            your choice of meat and our signature
+                            red mole poured on top like you’ve never seen before.(Our signature spicy tres amigos
+                            salsa and los tres kings super spicy salsa dips are optionable replacements for
+                            guacamole)</span>
+                        <div class="total-price ">$14</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <div id="Combo-Plates" class="tabcontent">
+                <div class="title">
+                    <h5 class="menu-category" style="z-index:0;"><strong>COMBO PLATES&nbsp;&nbsp;</strong></h5>
+                    <h5>All Plates include Rice, Beans and you choice of meat: Carne Asada, Lengua, Chorizo, Birria,
+                        Chicken, Tripas, and Al Pastor.
+                    </h5>
+                </div>
+
+                <!-- Product #13 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Taco Platter:</strong>&nbsp;Three signature tacos served
+                            with our freshly handmade tortillas,
+                            topped with pico de gallo, sour cream, guacamole, and your choice of meat(s), with
+                            spanish rice and refried beans on the side leaving your mouthwatering taste buds
+                            satisfied. (Our signature spicy tres amigos salsa and los tres kings super spicy salsa
+                            dips are optionable replacements for guacamole).
+                        </span>
+
+                        <div class="total-price">$18</div>
+                    </div>
+                </div>
+
+
+                <!-- Product #14 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8ZW5jaGlsYWRhc3xlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Enchiladas:</strong>Three signature enchiladas prepared
+                            with our freshly handmade
+                            tortillas, stuffed with cheese and your choice of meat(s), served with spanish rice and
+                            refried beans on the side and topped with pico de gallo, sour cream, guacamole, and your
+                            choice of our signature red or green sauce.
+
+                        </span>
+                        <div class="total-price">$20</div>
+                    </div>
+                </div>
+
+
+                <!-- Product #15 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1585975754487-25489eabf36a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fG1leGljYW4lMjBmb29kfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Huevos Rancheros:</strong>&nbsp;Two sunny side eggs
+                            prepared with our freshly handmade tortillas
+                            mixed in, topped with cheese, your choice of meat(s), with pico de gallo, sour cream,
+                            guacamole, and your choice of our signature red or green sauce and served with spanish
+                            rice and refried beans on the side.
+                        </span>
+                        <div class="total-price">$18</div>
+                    </div>
+                </div>
+
+
+
+                <!-- Product #16 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1579640873954-766bf0235bf3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fG1leGljYW4lMjBmb29kfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Pozole:</strong>&nbsp;Red Posole with your choice of
+                            chicken or beef served with spanish
+                            rice and refried beans on the side and topped with cilantro, onions, radishes and
+                            hominy.
+                        </span>
+
+                        <div class="total-price">$22</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="Desserts" class="tabcontent">
+                <div class="title">
+                    <h4 class="menu-category">DESSERTS</h4>
+                </div>
+
+                <!-- Product #17 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1541717872011-9d16b87a5551?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bWV4aWNhbiUyMGZvb2QlMjBkZXNzZXJ0c3xlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Pan:</strong>&nbsp;A plate of four specialized conchas
+                            served with hot chocolate to
+                            top off your marvelous meal.
+                        </span>
+                        <div class="total-price">$8</div>
+                    </div>
+                </div>
+
+                <!-- Product #18 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1597384462874-56b0bdeca197?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8bWV4aWNhbiUyMGZvb2QlMjBkZXNzZXJ0c3xlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Flan:</strong>&nbsp;A plate of two specialized flan
+                            jello.
+                        </span>
+                        <div class="total-price">$8</div>
+                    </div>
+                </div>
+
+                <!-- Product #19 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/4553118/pexels-photo-4553118.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Tres Leches Cake</strong>&nbsp;A plate of our vanilla,
+                            chocolate, and strawberry tres leches milk
+                            cake.
+                        </span>
+                        <div class="total-price">$10</div>
+                    </div>
+                </div>
+
+                <!-- Product #20 -->
+                <div class="Options">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://images.pexels.com/photos/3679973/pexels-photo-3679973.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt=item style="width:100px; height:100px; object-fit: cover;" />
+                        <span class="long-description"><strong>Mexican Yogurt</strong>&nbsp;A bowl of our yogurt parfae
+                            mixed with fruits and milk.
+                        </span>
+                    </div>
+                    <button class="add-to-cart add-nachos" type="button" onclick="addYogurt()">Add to
+                        cart</button>
+                    <span class="description">Yogurt</span>
+
+                    <div class="total-price">$8</div>
+                </div>
+            </div>
+
+
+        </div>
+        <section>
+            <div class="links">
+                <form class="sign-up-form" action="/action_page.php">
+                    <div class="signup">
+                        <h3>Subscribe to our Newsletter for<br>promotions and announcements!</h3>
+                        <input type="text" placeholder="Email address" name="mail" required>
+                        <input type="submit" value="Subscribe!">
+                    </div>
+                </form>
+                <div class="social">
+                    <h2>Follow our Socials for news and updates!</h2>
+                    <div class="child-social ">
+                        <a href="http://www.twitter.com"><img
+                                src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Twitter_NEW.png"
+                                width="30 " height="30 " alt="Twitter "></a>
+                        <a href="http://www.instagram.com"><img
+                                src="https://cdn.iconscout.com/icon/free/png-512/instagram-233-896451.png" width="30"
+                                height="30 " alt="Instagram "></a>
+                        <a href="http://www.facebook.com"><img
+                                src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" width="30"
+                                height="30 " alt="Facebook "></a>
+                    </div>
+                </div>
+                <div class="button1 ">
+                    <button onclick="document.location='contactus.html' ">Contact Us</button>
+                    <button onclick="document.location='Career.html' ">Careers</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/javascript ">
+        $('.like-btn').on('click', function() {
+            $(this).toggleClass('is-active');
+        });
+
+        $('.minus-btn').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $input = $this.closest('div').find('input');
+            var value = parseInt($input.val());
+
+            if (value > 1) {
+                value = value - 1;
+            } else {
+                value = 0;
+            }
+
+            $input.val(value);
+
+        });
+
+        $('.plus-btn').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $input = $this.closest('div').find('input');
+            var value = parseInt($input.val());
+
+            if (value < 100) {
+                value = value + 1;
+            } else {
+                value = 100;
+            }
+
+            $input.val(value);
+        });
+    </script>
+
+    <script>
+        function openMenu(evt, menuName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent ");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none ";
+            }
+            tablinks = document.getElementsByClassName("tablinks ");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active ", " ");
+            }
+            document.getElementById(menuName).style.display = "block ";
+            evt.currentTarget.className += " active ";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js "></script>
+    <script src="MenuScript.js "></script>
+    </div>
+</body>
+
+</html>

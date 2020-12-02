@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="reservation.css">
+    <link rel="stylesheet" type="text/css" href="practice.css">
+</head>
+
+<body>
+    <div class="root">
+        <nav class="home-page">
+            <div class="logo">
+                <a href="index.html"><img src="https://i.ibb.co/HCPmHPG/ltalogo.png" alt="Logo"
+                        style="width:100px; height:100px;"></a>
+            </div>
+
+            <div class="HPButtons">
+                <button class="navbutton" onclick="document.location='foodmenu.html'">Menu</button>
+                <button class="navbutton" onclick="document.location='reservation.html'">Book Reservation</button>
+                <button class="navbutton" onclick="document.location='Locations.html'">Locations</button>
+                <button class="navbutton" onclick="document.location='AboutUs.html'">About Us</button>
+                <button class="navbutton" onclick="document.location='signup.html'">Sign Up</button>
+            </div>
+
+            <div class="user-cart">
+                <a href="Cart.html"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png"
+                        style="width:25px; height:25px;"></a>
+                <a href="UserPage.html"><img src="https://static.thenounproject.com/png/19085-200.png" alt="User" style="width:25px; height:25px;"></a>
+            </div>
+        </nav>
+        <section class="reserve-parent">
+            <h3>Booking a reservation</h3>
+            <div class="reserve">
+                <p>To make a reservation please type in your name and the specific time you would like to dine with us.
+                    Thank you.</p>
+                <form id="reservation" method="post" action="">
+                    <p><label class="name">Name:
+                            <input id="name" name="name" type="text" size="25" mexlength="30">
+                        </label></p>
+                    <p><label class="date">Date:<input id="date" type="date" />
+                        </label></p>
+                    <p><label class="time">Time:
+                            <input id="time" name="time" type="time" size="25">
+
+                        </label></p>
+                    <p><label class="guest">Number of Guests:<input id="guest" min="1" max="20" name="guest"
+                                type="number">Maximum 20 people. </label></p>
+                                <p><label class="location">Location:<select id="location">
+                                    <option>1234 ABC St., CA 91121</option>
+                                    <option>4321 CAB St., CA 95112</option>
+                                </select></label></p>
+                    <input type="submit" value="submit">
+
+                </form>
+            </div>
+        </section>
+
+        <div class="links">
+            <form id="email" class="sign-up-form" action="">
+                <div class="signup">
+                    <h3>Subscribe to our Newsletter for<br>promotions and announcements!</h3>
+                    <input id="sub" type="text" placeholder="Email address" name="mail" required>
+                    <input type="submit" value="Subscribe!">
+                </div>
+            </form>
+            <div class="social">
+                <h2>Follow our Socials for news and updates!</h2>
+                <div class="child-social">
+                    <a href="http://www.twitter.com"><img
+                            src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Twitter_NEW.png"
+                            width="30" height="30" alt="Twitter"></a>
+                    <a href="http://www.instagram.com"><img
+                            src="https://cdn.iconscout.com/icon/free/png-512/instagram-233-896451.png" width="30"
+                            height="30" alt="Instagram"></a>
+                    <a href="http://www.facebook.com"><img
+                            src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" width="30"
+                            height="30" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="button1">
+                <button onclick="document.location='contactus.html'">Contact Us</button>
+                <button onclick="document.location='Career.html'">Careers</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+        const form1 = document.getElementById("reservation");
+        form1.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+            axios.post('/reservations', {
+                name: document.getElementById("name").value,
+                date: document.getElementById("date").value,
+                time: document.getElementById("time").value,
+                guest: document.getElementById("guest").value,
+                location: document.getElementById("location").value
+            }).then(res => location.href = '/')
+        });
+        const request = new XMLHttpRequest();
+        console.log("making the request")
+        request.open("post", "localhost:3000/reservations");   // Define the URL to connect.
+        request.onload = function () {    // Execute this function when the server responds.
+            const json = JSON.parse(request.response);
+            if (json.success) {
+                window.location.href = 'index.html';   // Redirect to user.html if successful login.
+            }
+            else {
+                window.alert(json.message);   // Display an alert if something goes wrong.
+            }
+        }
+        var data = {
+            name: document.getElementById("name").value,
+            date: document.getElementById("date").value,
+            time: document.getElementById("time").value,
+            guest: document.getElementById("guest").value,
+            location: document.getElementById("location").value
+        }
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");   // Add headers to the request.
+        request.send(JSON.stringify(data));   // Send the request to the server along with data. Data contains information given by the user. 
+
+    </script>
+   
+   
+   
+   
+   <script type="text/javascript">
+
+        const form2 = document.getElementById("email");
+        form2.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+            axios.post('/reservations', {
+                sub: document.getElementById("sub").value,
+
+            }).then(res => location.href = '/')
+        });
+        // const requests = new XMLHttpRequest();
+        console.log("making the request")
+        request.open("post", "localhost:3000/reservations");   // Define the URL to connect.
+        request.onload = function () {    // Execute this function when the server responds.
+            const json = JSON.parse(request.response);
+            if (json.success) {
+                window.location.href = 'index.html';   // Redirect to user.html if successful login.
+            }
+            else {
+                window.alert(json.message);   // Display an alert if something goes wrong.
+            }
+        }
+        var data = {
+            sub: document.getElementById("sub").value,
+
+        }
+
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");   // Add headers to the request.
+        request.send(JSON.stringify(data));   // Send the request to the server along with data. Data contains information given by the user. 
+
+    </script>
+</body>
+
+</html>

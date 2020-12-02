@@ -1,0 +1,27 @@
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+align-items: center;
+}
+
+
+.existing-user{
+
+position:relative;
+margin: auto;
+padding: 20px;
+background-color: rgb(255, 179, 71);
+}
+
+.existing-user input[type=submit]{
+  float: right;
+  margin-top: 10px;
+
+}
+
+.existing-user input[type=submit] :hover{
+  opacity: 0.7;
+  float: right;
+}

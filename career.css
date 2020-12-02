@@ -1,0 +1,72 @@
+
+.root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin-top:120px;
+    font-size:30px
+}
+
+.r-manager {
+    width: 33%;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color: black;
+    border: solid;
+    padding:10px 10px 10px 10px;
+   
+
+}
+
+.fry-cook {
+    width: 33%;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color: black;
+    border: solid;
+    padding:10px 10px 10px 10px;
+}
+
+.waiter {
+    width: 33%;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color: black;
+    border: solid;
+    padding:10px 10px 10px 10px;
+}
+
+.container-career {
+    width: 33%;
+    margin: 130px 0px 50px 0px;}
+
+.benefits {
+    width: 33%;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color: black;
+    border: solid;
+    padding:10px 10px 10px 10px;
+}
+
+.sign-up-career {
+    width: 33%;
+    border-radius: 15px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    
+}
+
+.sign-up-career button {
+    float: right;
+    font-size: 15px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
